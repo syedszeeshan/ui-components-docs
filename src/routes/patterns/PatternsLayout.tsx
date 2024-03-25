@@ -1,4 +1,9 @@
-import { GoADropdown, GoADropdownItem, GoASideMenu, GoASideMenuHeading } from "@abgov/react-components";
+import {
+  GoADropdown,
+  GoADropdownItem,
+  GoASideMenu,
+  GoASideMenuHeading
+} from "@abgov/react-components";
 import {Link, Outlet} from "react-router-dom";
 import {SupportInfo} from "@components/support-info/SupportInfo.tsx";
 import {useEffect, useState} from "react";
@@ -23,13 +28,24 @@ export default function PatternsLayout() {
       <div className="content">
         <section className="side-menu">
           <GoASideMenu>
-            <GoASideMenuHeading>Patterns and templates</GoASideMenuHeading>
+            <GoASideMenuHeading>Patterns</GoASideMenuHeading>
+            <Link to="">Overview</Link>
+            <Link to="simple-form">Simple form</Link>
+          </GoASideMenu>
+          <GoASideMenu>
+            <GoASideMenuHeading>Pages</GoASideMenuHeading>
             <GoADropdown value={language} onChange={onLanguageChange} mb="m" mt="m" mr="m" ml="m">
               <GoADropdownItem label="React" value="react" />
               <GoADropdownItem label="Angular" value="angular" />
             </GoADropdown>
-            <Link to="">Layout</Link>
+            <Link to="layout">Basic page layout</Link>
+            <Link to="">Start page</Link>
+            <Link to="">Task list page</Link>
+            <Link to="">Question pages</Link>
+            <Link to="">Review page</Link>
+            <Link to="">Results page</Link>
           </GoASideMenu>
+
         </section>
         <main className="main">
           <Outlet />

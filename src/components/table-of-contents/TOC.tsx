@@ -78,6 +78,7 @@ export function TOC(props: TOCProps) {
 
   function queryItems(): TOCItem[] {
     let headings = document.querySelectorAll<HTMLHeadingElement>(props.cssQuery);
+    console.log(headings);
     let tocNodes: TOCItem[] = [];
 
     headings.forEach(el => {

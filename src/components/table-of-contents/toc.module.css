@@ -11,7 +11,8 @@
 }
 
 a.toc-item-h2,
-a.toc-item-h3 {
+a.toc-item-h3,
+a.toc-item-h4 {
   border-left: 1px solid var(--goa-color-greyscale-200);
   font: var(--goa-typography-body-s);
   color: var(--goa-color-text-secondary);
@@ -28,25 +29,33 @@ a.toc-item-h3 {
   padding-left: var(--goa-space-xl);
 }
 
+.toc-item-h4 {
+  padding-left: calc(var(--goa-space-xl) - 4px);
+}
+
 a.toc-item-h2:hover,
-a.toc-item-h3:hover {
+a.toc-item-h3:hover,
+a.toc-item-h4:hover {
   color: var(--goa-color-interactive-hover);
 }
 
 a[href^="#"].toc-item-h2::before,
-a[href^="#"].toc-item-h3::before {
+a[href^="#"].toc-item-h3::before,
+a[href^="#"].toc-item-h4::before {
   background: none;
   margin: 0;
   width: 0;
 }
 
 .toc-item-h2:focus-visible,
-.toc-item-h3:focus-visible {
+.toc-item-h3:focus-visible,
+.toc-item-h4:focus-visible {
   outline: var(--goa-border-width-l) solid var(--goa-color-interactive-focus);
 }
 
 .active.toc-item-h2,
-.active.toc-item-h3 {
+.active.toc-item-h3,
+.active.toc-item-h4 {
   font: var(--goa-typography-heading-xs);
   color: var(--goa-color-text-default);
   border-left: 4px solid var(--goa-color-interactive-default);
@@ -58,4 +67,7 @@ a[href^="#"].toc-item-h3::before {
 
 .active.toc-item-h3 {
   padding-left: calc(var(--goa-space-xl) - 4px);
+}
+.active.toc-item-h4 {
+  padding-left: calc(var(--goa-space-xl) - 8px);
 }

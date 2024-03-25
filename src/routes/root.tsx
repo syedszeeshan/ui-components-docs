@@ -46,7 +46,7 @@ export default function Root() {
           />
           <GoAAppHeader heading="Design system" maxContentWidth={MAX_CONTENT_WIDTH} url={"/"}>
             <Link to="/get-started">Get started</Link>
-            <Link to="/patterns">Patterns and templates</Link>
+            <Link to="/patterns">Patterns</Link>
             <Link to="/components">Components</Link>
             <Link to="/design-tokens">Styles</Link>
             <Link to="/content/capitalization">Content</Link>
